@@ -1,1 +1,1 @@
-settings and such
+my personal settings for sublime, bash, and other such things

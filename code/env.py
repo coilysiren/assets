@@ -1,4 +1,4 @@
-# pip install python-dotenv
+# $ pip install python-dotenv
 # repo: https://github.com/theskumar/python-dotenv
 #
 # Use with a `.env` file (added to .gitignore!!!) in the

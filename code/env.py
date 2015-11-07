@@ -1,6 +1,8 @@
-# pip install python-dotenv // https://github.com/theskumar/python-dotenv
+# pip install python-dotenv
+# repo: https://github.com/theskumar/python-dotenv
 #
-# example `.env` file:
+# Use with a `.env` file (added to .gitignore!!!) in the
+# same directory. Example .env file:
 #
 #     USER=lynn
 #     PASS=XXXXXXXXXXXXXX

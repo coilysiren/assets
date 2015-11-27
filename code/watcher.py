@@ -13,9 +13,6 @@ import os
 from glob import glob
 
 
-LOG = logging.getLogger(__name__)
-
-
 class Builder(object):
 
     def __init__(self, assets_dir, output_dir, logger=print):
@@ -75,11 +72,6 @@ class Builder(object):
         watch.schedule(handler, self.assets_dir, recursive=True)
         watch.start()
         self.logger('Watching \'{}\' for changes'.format(self.assets_dir))
-
-def activate():
-    builder = Builder('static/assets/', 'static/css/')
-    builder.start()
-    builder.compile_sass()
 
 
 if __name__ == '__main__':

@@ -1,3 +1,6 @@
+# TODO
+# * check if files are actually build
+
 # File Watcher and Build System
 
 # $ pip install watchdog
@@ -15,9 +18,10 @@ LOG = logging.getLogger(__name__)
 
 class Builder(object):
 
-    def __init__(self, assets_dir, output_dir):
+    def __init__(self, assets_dir, output_dir, logger=print):
         self.assets_dir = assets_dir
         self.output_dir = output_dir
+        self.logger = logger
 
     def compile_sass(self, *args, **kwargs):
         # $ sudo apt-get install python-dev
@@ -31,11 +35,11 @@ class Builder(object):
         #    watcher, it wont close when its parent python process closes.
         #    which leads to dozens of `sassc --watch` processes open forever
 
+        error = 0
+
         for sass_file_path in glob(self.assets_dir+'*.*'):
             filename = sass_file_path.split(self.assets_dir)[-1].split('.')[0]
             css_path = self.output_dir + filename + '.css'
-
-            LOG.info('Building \'{}\''.format(css_path))
 
             sass_args = {
                 'source': '{}'.format(sass_file_path),
@@ -48,7 +52,17 @@ class Builder(object):
                 preexec_fn=os.setsid,
                 stdout=subprocess.PIPE
             )
-        LOG.info('Completed Build')
+
+            if glob(css_path):
+                self.logger('Built \'{}\''.format(css_path))
+            else:
+                self.logger('Error when building \'{}\''.format(css_path))
+                error = 1
+
+        if not error:
+            self.logger('Completed Build')
+        else:
+            self.logger('[ERROR!] Build Incomplete')
 
     def start(self):
         from watchdog.observers import Observer
@@ -60,7 +74,7 @@ class Builder(object):
         watch = Observer()
         watch.schedule(handler, self.assets_dir, recursive=True)
         watch.start()
-        LOG.info('Watching \'{}\' for changes'.format(self.assets_dir))
+        self.logger('Watching \'{}\' for changes'.format(self.assets_dir))
 
 def activate():
     builder = Builder('static/assets/', 'static/css/')

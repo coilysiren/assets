@@ -1,0 +1,10 @@
+.env
+config/initializers/secret_token.rb
+
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+.bundle
+/vendor/bundle
+/log
+/tmp

@@ -2,7 +2,7 @@
 	"auto_complete_commit_on_tab": true,
 	"caret_style": "solid",
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 12,
+	"font_size": 16,
 	"highlight_line": true,
 	"ignored_packages":
 	[

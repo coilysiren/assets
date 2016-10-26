@@ -8,6 +8,8 @@ export ENV="development"
 export RACK_ENV="development"
 export RAILS_ENV="development"
 
+export EDITOR="subl"
+
 alias ..='cd ..'
 
 alias profile-edit='subl ~/.bash_profile'
@@ -18,6 +20,7 @@ alias st='foreman start'
 alias gt='git status'
 alias gs='git status'
 alias ga='git add . --all'
+alias git-modified="$EDITOR `git status --porcelain | sed -ne 's/^ M //p'`"
 
 alias sv='source .venv/bin/activate'
 alias profile='source ~/.bash_profile'

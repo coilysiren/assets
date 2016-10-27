@@ -20,6 +20,7 @@ alias st='foreman start'
 alias gt='git status'
 alias gs='git status'
 alias ga='git add . --all'
+alias gush="git push -u origin HEAD"
 alias git-modified="$EDITOR `git status --porcelain | sed -ne 's/^ M //p'`"
 
 alias sv='source .venv/bin/activate'

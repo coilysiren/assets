@@ -15,6 +15,7 @@ export RAILS_ENV="development"
 
 export EDITOR="subl"
 
+alias ls='ls -GFh'
 alias ..='cd ..'
 
 alias profile-edit='subl ~/.bash_profile'

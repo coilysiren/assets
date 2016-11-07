@@ -1,0 +1,10 @@
+<!-- ipython_embed.sublime-snippet -->
+
+<snippet>
+    <content><![CDATA[
+from IPython import embed; embed()
+]]></content>
+    <tabTrigger>ipython_embed</tabTrigger>
+    <scope>source.python</scope>
+    <description>IPython embed snippet</description>
+</snippet>

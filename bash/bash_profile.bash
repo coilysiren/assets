@@ -15,6 +15,10 @@ export RAILS_ENV="development"
 
 export EDITOR="subl"
 
+grep_open() {
+     $EDITOR $(grep -lir "$1" .)
+}
+
 alias ls='ls -GFh'
 alias ..='cd ..'
 

@@ -18,6 +18,8 @@ export EDITOR="subl"
 alias ls='ls -GFh'
 alias ..='cd ..'
 
+alias node='nodejs'
+
 alias profile-edit='subl ~/.bash_profile'
 alias profile-init='. ~/.bash_profile'
 

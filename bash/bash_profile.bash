@@ -38,5 +38,7 @@ alias git-modified="$EDITOR `git status --porcelain | sed -ne 's/^ M //p'`"
 alias sv='source .venv/bin/activate'
 alias profile='source ~/.bash_profile'
 
+alias pip-reset='pip freeze | xargs pip uninstall -y'
+
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi

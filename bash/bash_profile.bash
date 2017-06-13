@@ -13,6 +13,10 @@ grep_open() {
      $EDITOR $(grep -lir "$1" .)
 }
 
+git_grep_open() {
+    $EDITOR $(git grep --name-only "$1")
+}
+
 alias ls='ls -GFh'
 
 alias node='nodejs'
@@ -34,7 +38,7 @@ alias git-modified="$EDITOR `git status --porcelain | sed -ne 's/^ M //p'`"
 
 # Python
 
-alias sv='source .venv/bin/activate && source .venv/bin/postactivate'
+alias sv='source .venv/bin/activate && profile-source && source .venv/bin/postactivate'
 alias pip-remove-all='pip freeze | xargs pip uninstall -y'
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

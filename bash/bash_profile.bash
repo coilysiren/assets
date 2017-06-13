@@ -44,6 +44,8 @@ alias pip-remove-all='pip freeze | xargs pip uninstall -y'
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+pyenv global 3.6.1 2.7.12 3.3.6 3.4.5 3.5.2
+
 # Ruby
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

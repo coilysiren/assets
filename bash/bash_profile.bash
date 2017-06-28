@@ -22,7 +22,7 @@ alias node='nodejs'
 
 alias profile-edit='subl ~/.bash_profile'
 alias profile-init='. ~/.bash_profile'
-alias profile-source='profile-edit'
+alias profile-source='profile-init'
 
 alias st='foreman start'
 

@@ -1,3 +1,6 @@
+alias line-wrap-disable='tput rmam'
+alias line-wrap-enable='tput smam'
+
 ps1_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }

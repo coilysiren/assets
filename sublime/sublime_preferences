@@ -1,7 +1,6 @@
 {
     "auto_complete_commit_on_tab": true,
     "caret_style": "solid",
-    "color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
     "ensure_newline_at_eof_on_save": true,
     "folder_exclude_patterns":
     [

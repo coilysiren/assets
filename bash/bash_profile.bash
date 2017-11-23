@@ -7,6 +7,7 @@ ps1_git_branch() {
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export PS1="\a\e[1;33m\u@\h \e[1;31m\w\e[1;32m\$(ps1_git_branch)\[\033[00m\] \@ \n$ "
 export PS1="🙂 \a\e[1;33m\u@\h 🚗 \e[1;31m\w 🌳 \e[1;32m\$(ps1_git_branch) \[\033[00m\] 🕑  \@ \n$ "
 
 export EDITOR="subl"

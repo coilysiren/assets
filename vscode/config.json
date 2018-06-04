@@ -1,4 +1,8 @@
 {
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "workbench.statusBar.visible": false,
+    "workbench.colorTheme": "Abyss",
     "files.exclude": {
         "node_modules/": true,
         "*built*": true,
@@ -19,11 +23,9 @@
     "editor.tabSize": 2,
     "git.confirmSync": false,
     "editor.formatOnSave": true,
-    "workbench.statusBar.visible": false,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
     "editor.fontSize": 16,
-    "workbench.colorTheme": "Abyss",
     "[html]": {
         "editor.formatOnPaste": false,
         "editor.formatOnSave": false,
@@ -39,7 +41,6 @@
     "explorer.confirmDelete": false,
     "editor.acceptSuggestionOnEnter": "off",
     "files.insertFinalNewline": true,
-    "editor.fontFamily": "Menlo",
     "window.restoreFullscreen": true,
     "files.trimTrailingWhitespace": true,
     "editor.wordWrap": "off",

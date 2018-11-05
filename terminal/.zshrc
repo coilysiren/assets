@@ -1,8 +1,6 @@
 # bash tools
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-fpath+=('/usr/lib/node_modules/pure-prompt/functions')
-
 # zsh
 export ZSH=/Users/lynn/.oh-my-zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -17,7 +15,6 @@ prompt pure
 PURE_GIT_PULL=0
 
 # system config
-export HOMEBREW_AUTO_UPDATE_SECS="86400"
 export EDITOR='code'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
@@ -26,8 +23,8 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # node version manager
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+# export NVM_DIR="$HOME/.nvm"
+# . "/usr/local/opt/nvm/nvm.sh"
 
 # aliases
 alias ls='ls -GFh'
@@ -38,4 +35,4 @@ alias line-wrap-disable='tput rmam'
 alias line-wrap-enable='tput smam'
 
 # added by travis gem
-[ -f /Users/lynn/.travis/travis.sh ] && source /Users/lynn/.travis/travis.sh
+# [ -f /Users/lynn/.travis/travis.sh ] && source /Users/lynn/.travis/travis.sh

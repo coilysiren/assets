@@ -1,6 +1,8 @@
 # bash tools
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+fpath+=('/usr/lib/node_modules/pure-prompt/functions')
+
 # zsh
 export ZSH=/Users/lynn/.oh-my-zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh

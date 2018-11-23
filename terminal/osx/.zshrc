@@ -36,3 +36,7 @@ alias line-wrap-enable='tput smam'
 
 # added by travis gem
 # [ -f /Users/lynn/.travis/travis.sh ] && source /Users/lynn/.travis/travis.sh
+
+# go
+export GOROOT=/usr/local/opt/go/libexec
+export GO111MODULE=on

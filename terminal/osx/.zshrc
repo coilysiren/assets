@@ -19,8 +19,11 @@ export EDITOR='code'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # python
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+export PIP_REQUIRE_VIRTUALENV=true
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PATH="`python3 -m site --user-base`/bin:$PATH"
 
 # node version manager
 # export NVM_DIR="$HOME/.nvm"

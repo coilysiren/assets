@@ -33,3 +33,13 @@ PURE_GIT_PULL=0
 export PATH="/home/lynn/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# aliases
+alias ls='ls -GFh'
+alias gt='git status'
+alias gush="git push -u origin HEAD"
+alias git-modified="$EDITOR `git status --porcelain | sed -ne 's/^ M //p'`"
+
+# go
+export GOROOT=/usr/local/opt/go/libexec
+export GO111MODULE=on

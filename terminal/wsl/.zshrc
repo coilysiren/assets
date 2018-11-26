@@ -14,6 +14,7 @@ export NVM_DIR="/home/lynn/.nvm"
 
 # https://github.com/robbyrussell/oh-my-zsh
 export ZSH="/home/lynn/.oh-my-zsh"
+plugins=()
 ZSH_THEME=""
 HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"

@@ -30,10 +30,21 @@ prompt pure
 PURE_GIT_PULL=0
 
 # aliases
+function gc {
+  _gc "$1" &
+}
+function _gc {
+  rm -f .gitoutput
+  git commit . -m "$1" --allow-empty &>> .gitoutput
+  git push -u origin HEAD --verbose &>> .gitoutput
+  [ $? -ne 0 ] && cat .gitoutput; rm -f .gitoutput
+}
 alias ls='ls -GFh'
 alias gt='git status'
 alias gush="git push -u origin HEAD"
 alias git-modified="$EDITOR `git status --porcelain | sed -ne 's/^ M //p'`"
+alias line-wrap-disable='tput rmam'
+alias line-wrap-enable='tput smam'
 
 # go
 export GO111MODULE=on

@@ -30,6 +30,15 @@ export PATH="`python3 -m site --user-base`/bin:$PATH"
 # . "/usr/local/opt/nvm/nvm.sh"
 
 # aliases
+function gc {
+  _gc "$1" &
+}
+function _gc {
+  rm -f .gitoutput
+  git commit . -m "$1" --allow-empty &>> .gitoutput
+  git push -u origin HEAD --verbose &>> .gitoutput
+  [ $? -ne 0 ] && cat .gitoutput; rm -f .gitoutput
+}
 alias ls='ls -GFh'
 alias gt='git status'
 alias gush="git push -u origin HEAD"

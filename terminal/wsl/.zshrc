@@ -14,8 +14,8 @@ export NVM_DIR="/home/lynn/.nvm"
 
 # https://github.com/robbyrussell/oh-my-zsh
 export ZSH="/home/lynn/.oh-my-zsh"
-plugins=()
 ZSH_THEME=""
+plugins=()
 HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 DEFAULT_USER=lynn
@@ -29,11 +29,6 @@ autoload -U promptinit; promptinit
 prompt pure
 PURE_GIT_PULL=0
 
-# https://github.com/pyenv/pyenv
-export PATH="/home/lynn/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # aliases
 alias ls='ls -GFh'
 alias gt='git status'
@@ -41,5 +36,5 @@ alias gush="git push -u origin HEAD"
 alias git-modified="$EDITOR `git status --porcelain | sed -ne 's/^ M //p'`"
 
 # go
-export GOROOT=/usr/local/opt/go/libexec
 export GO111MODULE=on
+export GOPATH=/mnt/c/Users/Lynn/projects/
